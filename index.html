@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;700;900&display=swap" rel="stylesheet">
 <!-- Compiled and minified CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
 
 <style>
 body, html {height: 100%}
@@ -39,7 +39,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Spartan", sans-serif}
 </div>
   
 <!-- HOME -->
-<header class="bgimg w3-display-container" id="home">
+<!-- <header class="bgimg w3-display-container" id="home">
 
   <div class="w3-display-middle w3-center">
     <span class="w3-text-white w3-hide-small" style="font-size:70px"><strong>Need a Taxi?</strong></span>
@@ -47,7 +47,23 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Spartan", sans-serif}
     <p><a href="#register" class="w3-button w3-xlarge w3-light-grey">Or Register</a></p>
   </div>
 
-</header>
+</header> -->
+
+<section id="homeSection">
+  <div id="landingWrapper">
+    <h3 id="landingWords">I'm in</h3>
+    <select onchange="areaSelect()" id="landingSelector">
+      <option value=""></option>
+      <option value="North">the North</option>
+      <option value="Central">Central</option>
+      <option value="South">South</option>
+      <option value="West">the West</option>
+      <option value="East">the East</option>
+      <option value="Tobago">Tobago</option>v
+    </select>
+  </div>
+  <div id="results"></div>
+</section>
 
 <!-- ABOUT -->
 <div class="w3-container w3-padding-64 w3-red w3-grayscale w3-xlarge" id="about">
@@ -75,73 +91,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Spartan", sans-serif}
   </div>
 </div>
 
-<!-- FIND A TAXI -->
-<div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="taxis">
-  <div class="w3-content">
-  
-    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Find a Taxi</h1>
-    <div class="w3-row w3-center w3-border w3-border-dark-grey">
-      <a href="javascript:void(0)" onclick="openMenu(event, 'South');" id="myLink">
-        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">South</div>
-      </a>
-      <a href="javascript:void(0)" onclick="openMenu(event, 'Central');">
-        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Central</div>
-      </a>
-      <a href="javascript:void(0)" onclick="openMenu(event, 'North');">
-        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">North</div>
-      </a>
-    </div>
-
-    <!--South-->
-    <div id="South" class="w3-container menu w3-padding-32 w3-white">
-      <h1><b>Marc Beepath</b> <span class="w3-right w3-tag w3-dark-grey w3-round">PCW 714</span></h1>
-      <p class="w3-text-grey">DP# 12345</p>
-      <hr>
-   
-      <h1><b>Josiah Bajnath</b> <span class="w3-right w3-tag w3-dark-grey w3-round">PDA 26</span></h1>
-      <p class="w3-text-grey">DP# 87654</p>
-      <hr>
-
-      <h1><b>Randy K. Hensley</b> <span class="w3-tag w3-green w3-round">Verified</span><span class="w3-right w3-tag w3-dark-grey w3-round">PBE 2789</span></h1>
-      <p class="w3-text-grey">DP# 78354</p>
-      <hr>
-
-    </div>
-
-    <!--Central-->
-    <div id="Central" class="w3-container menu w3-padding-32 w3-white">
-      <h1><b>Tim Persad</b> <span class="w3-right w3-tag w3-dark-grey w3-round">PBW 420</span></h1>
-      <p class="w3-text-grey">DP# 12983</p>
-      <hr>
-   
-      <h1><b>Adelina Rampersad</b> <span class="w3-tag w3-grey w3-round">Female Driver</span><span class="w3-right w3-tag w3-dark-grey w3-round">PCS 2140</span></h1>
-      <p class="w3-text-grey">DP# 86283</p>
-      <hr>
-      
-    </div>
-
-
-    <!--North-->
-    <div id="North" class="w3-container menu w3-padding-32 w3-white">
-
-      <h1><b>John Clifford</b> <span class="w3-tag w3-grey w3-round">New Driver</span><span class="w3-right w3-tag w3-dark-grey w3-round">PEA 21</span></h1>
-      <p class="w3-text-grey">DP# 92367</p>
-      <hr>
-   
-      <h1><b>Darrien Persad</b> <span class="w3-tag w3-green w3-round">Verified</span><span class="w3-right w3-tag w3-dark-grey w3-round">PAW 69</span></h1>
-      <p class="w3-text-grey">DP# 21420</p>
-      <hr>
-      
-      <h1><b>Joe Mamma</b> <span class="w3-right w3-tag w3-dark-grey w3-round">PDE 1289</span></h1>
-      <p class="w3-text-grey">DP# 12782</p>
-      <hr>
-      
-    </div><br>
-
-  </div>
-</div>
-
-
 <!-- REGISTER -->
 <div class="w3-container w3-padding-64 w3-blue-grey w3-grayscale-min w3-xlarge" id="register">
   <div class="w3-content">
@@ -154,7 +103,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Spartan", sans-serif}
       <p><input id="vehicle" class="w3-input w3-padding-16 w3-border" type="text" placeholder="Vehicle No." required name="vehicle"></p>
       <p><input id="dp" class="w3-input w3-padding-16 w3-border" type="number" placeholder="Driver's Permit No." required name="dp"></p>
       <p><input id="phone" class="w3-input w3-padding-16 w3-border" type="number" placeholder="Phone No." required name="phone"></p>
-      <p><input id="area" class="w3-input w3-padding-16 w3-border" type="number" placeholder="Phone No." required name="phone"></p>
       <select id="area" name="area">
         <option value="North">North</option>
         <option value="West">West</option>
@@ -191,7 +139,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Spartan", sans-serif}
 <!-- Jquery -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <!-- Compiled and minified JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
 <script src="script.js"></script>
 
 </body>

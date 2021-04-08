@@ -241,6 +241,81 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .w3-border-pale-yellow,.w3-hover-border-pale-yellow:hover{border-color:#ffffcc!important}.w3-border-pale-blue,.w3-hover-border-pale-blue:hover{border-color:#e7ffff!important}
 
 
+/* Darrien Code */
+
+html,body {
+    overflow-x: hidden;
+}
+
+select {
+    /* background-color: rgba(0,0,0,0.12);
+    border: 5px white;
+    border-radius: 50px;
+    color: white */
+}
+
+#homeSection {
+    min-height: 80vh;
+    padding-top: 100px;
+    background-image: url("./pictures/landingbg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#landingWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 50px;
+}
+
+#landingWords {
+    color: white;
+}
+
+#landingSelector {
+    min-width: 45%;
+    margin-left: 10px;
+}
+
+#results {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#results>h4 {
+    color:white;
+}
+
+#driverList {
+    display: flex;
+    flex-direction: column;
+}
+
+.driverListItem {
+    background-color: rgba(216, 216, 216, 0.699);
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: space-between;
+    margin-bottom: 10px;
+}
+
+.listItemInner {
+    display: flex;
+    flex-direction: column;
+}
+
+.listItemVerifiedBadge {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     #taxis{
