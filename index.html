@@ -2,7 +2,7 @@
 
 <!--
   Created by J. Bajnath, M. Beepath, D. Persad, S. Persad, A. Rampersad (Alphabetical Order)
-  For Info1601 Final Project (UWI Y1S2 2021)
+  For INFO1601 Final Project (UWI-STA S2 2021)
 -->
 
 <html>
@@ -12,6 +12,8 @@
 <link rel="stylesheet" href="style.css">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;700;900&display=swap" rel="stylesheet">
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
 <style>
 body, html {height: 100%}
@@ -147,12 +149,21 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Spartan", sans-serif}
     <p>Do your part in making Trinidad & Tobago safer!</p>
     <p class="w3-large"><strong>Ensure all details are correct.</strong></p>
     
-    <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Full Name" required name="name"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Vehicle No." required name="vehicle"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="Driver's Permit No." required name="dp"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="Phone No." required name="phone"></p>
-      <p><button class="w3-button w3-light-grey w3-button" type="submit">REGISTER</button></p>
+    <form action="">
+      <p><input id="name" class="w3-input w3-padding-16 w3-border" type="text" placeholder="Full Name" required name="name"></p>
+      <p><input id="vehicle" class="w3-input w3-padding-16 w3-border" type="text" placeholder="Vehicle No." required name="vehicle"></p>
+      <p><input id="dp" class="w3-input w3-padding-16 w3-border" type="number" placeholder="Driver's Permit No." required name="dp"></p>
+      <p><input id="phone" class="w3-input w3-padding-16 w3-border" type="number" placeholder="Phone No." required name="phone"></p>
+      <p><input id="area" class="w3-input w3-padding-16 w3-border" type="number" placeholder="Phone No." required name="phone"></p>
+      <select id="area" name="area">
+        <option value="North">North</option>
+        <option value="West">West</option>
+        <option value="Central">Central</option>
+        <option value="East">East</option>
+        <option value="South">South</option>
+        <option value="Tobago">Tobago</option>
+      </select>
+      <button id="registerBtn" class="w3-button w3-light-grey w3-button" ">REGISTER</button>
     </form>
 
   </div>
@@ -163,6 +174,24 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Spartan", sans-serif}
   <p>Made with ♥ by Group 21</p>
 </footer>
 
+<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase.js"></script>
+<script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyAYj2LFEge5IGwbw2YDOAQ1wK2eEIaCQKM",
+    authDomain: "info160-b665c.firebaseapp.com",
+    projectId: "info160-b665c",
+    storageBucket: "info160-b665c.appspot.com",
+    messagingSenderId: "123659870226",
+    appId: "1:123659870226:web:68fe0b2f08c74dafbfb8cb"
+  };
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+<!-- Jquery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="script.js"></script>
 
 </body>
