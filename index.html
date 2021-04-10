@@ -12,23 +12,30 @@
 <link rel="stylesheet" href="style.css">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;700;900&display=swap" rel="stylesheet">
-<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
 
 <style>
 body, html {height: 100%}
 body,h1,h2,h3,h4,h5,h6 {font-family: "Spartan", sans-serif}
-.menu {display: none}
-.bgimg {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("pictures/bg.jpg");
-  min-height: 90%;
-}
 </style>
+
+
 <body>
 
-<!-- NAVIGATION -->
+<!-- NEW NAVIGATION -->
+<div class="topnav" id="myTopnav">
+  <a href="#" class="w3-bar-item w3-button"><i><strong>TRINITRANSPORT</strong></i></a>
+  <a href="#homeSection">Home</a>
+  <a href="#about">About</a>
+  <a href="#register">Register</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<!-- OLD NAVIGATION -->
+<!--
 <div class="w3-top w3-hide-small">
   <div class="w3-bar w3-xlarge w3-black" id="myNavbar">
     <a href="#" class="w3-bar-item w3-button"><i><strong>TRINITRANSPORT</strong></i></a>
@@ -37,16 +44,15 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Spartan", sans-serif}
     <a href="#register" class="w3-bar-item w3-button">Register</a>
   </div>
 </div>
+-->
   
-<!-- HOME -->
-<!-- <header class="bgimg w3-display-container" id="home">
 
+<!-- <header class="bgimg w3-display-container" id="home">
   <div class="w3-display-middle w3-center">
     <span class="w3-text-white w3-hide-small" style="font-size:70px"><strong>Need a Taxi?</strong></span>
     <p><a href="#taxis" class="w3-button w3-xxlarge w3-black">Find one</a></p>
     <p><a href="#register" class="w3-button w3-xlarge w3-light-grey">Or Register</a></p>
   </div>
-
 </header> -->
 
 <section id="homeSection">
@@ -75,18 +81,12 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Spartan", sans-serif}
 
     <h1><b>Some tips when using Public Transport</b></h1>
     
-    <div class="w3-row">
-      <div class="w3-col s6">
-        <li>Look for an official badge</li>
-        <li>Send a pic of the car to someone</li>
+        <li>Look for an official taxi badge</li>
+        <li>Send a picture of the license plate to someone</li>
         <li>Stay awake and alert</li>
-      </div>
-      <div class="w3-col s6">
         <li>Only use drivers from this registry</li>
         <li>Walk with pepper spray</li>
-        <li>Keep an emergency contact</li>
-      </div>
-    </div>
+        <li>Keep an emergency contact on your phone</li>
     
   </div>
 </div>
@@ -103,7 +103,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Spartan", sans-serif}
       <p><input id="vehicle" class="w3-input w3-padding-16 w3-border" type="text" placeholder="Vehicle No." required name="vehicle"></p>
       <p><input id="dp" class="w3-input w3-padding-16 w3-border" type="number" placeholder="Driver's Permit No." required name="dp"></p>
       <p><input id="phone" class="w3-input w3-padding-16 w3-border" type="number" placeholder="Phone No." required name="phone"></p>
-      <select id="area" name="area">
+      <p>
+      <select id="area" name="area" class="w3-select" required name="area">
+        <option value="">Select Area</option>
         <option value="North">North</option>
         <option value="West">West</option>
         <option value="Central">Central</option>
@@ -111,7 +113,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Spartan", sans-serif}
         <option value="South">South</option>
         <option value="Tobago">Tobago</option>
       </select>
-      <button id="registerBtn" class="w3-button w3-light-grey w3-button" ">REGISTER</button>
+      </p>
+      <button id="registerBtn" class="w3-button w3-light-grey w3-button"><strong>REGISTER</strong></button>
     </form>
 
   </div>
